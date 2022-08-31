@@ -1,0 +1,4 @@
+docker-compose up -d
+docker-compose run --rm app composer install
+docker-compose run --rm --entrypoint php app run_consumer.php
+docker-compose run --rm --entrypoint php app run_producer.php
